@@ -207,6 +207,7 @@ func TestStopBlockedPipeline(t *testing.T) {
 	select {
 	case <-done:
 	case <-time.After(time.Second):
+		panic("")
 		t.Fatalf("failed to stop pipeline in 1s")
 	}
 }
